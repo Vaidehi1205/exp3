@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('clone') {
             steps {
-                
+                git branch: 'main', credentialsId: 'c5328a29-9a8d-4d6b-96af-dc33e87ea52a', url: 'https://github.com/Vaidehi1205/exp3.git'
             }
         }
 
