@@ -2,21 +2,21 @@ pipeline {
 
     agent any // Runs on any available agent
     stages {
-        stage('1') {
+        stage('clone') {
             steps {
-                echo 'Hello World'
+                
             }
         }
 
-        stage('2') {
+        stage('compile') {
             steps {
-                echo 'Good morning'
+                bat 'javac HelloWorld.java'
             }
         }
 
-        stage('3') {
+        stage('run') {
             steps {
-                echo 'Good night'
+                bat 'java HelloWorld'
             }
         }
 
